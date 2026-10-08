@@ -6,25 +6,19 @@
   applies series of transitions to make everything function as expected
   -->
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import { useFlash } from '@/composables/useFlash'
 
-let message = $ref('Hello, World!')
-
-setTimeout(() => {
-  message = 'I have been changed'
-}, 2000)
+let { flash } = useFlash()
 </script>
 
 <template>
   <main>
     <!-- if referencing globally then we might want to do 'the-welcome' -->
     <!-- if we have component only being used once then 'The' is ideal -->
-    <TheWelcome />
-
-    <p>{{ message }}</p>
+    <!-- <TheWelcome /> -->
 
     <p>
-      <input type="text" v-model="message" />
+      <button @click="flash('Test', 'It Works!')">Click Me</button>
     </p>
   </main>
 </template>

@@ -21,9 +21,10 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
-```sh
+````sh
 npm install
-```
+npm install sweetalert --save-dev ``` or ```sh npm install sweetalert2
+````
 
 ### Compile and Hot-Reload for Development
 
@@ -42,3 +43,17 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Tool Setup
+
+### Custom Alerts
+
+````sh
+npm install sweetalert --save-dev ``` or ```sh npm install sweetalert2
+````
+
+#### importing alerts
+
+'''sh
+import Swal from 'sweetalert2'
+'''
