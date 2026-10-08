@@ -6,9 +6,11 @@
   applies series of transitions to make everything function as expected
   -->
 <script setup>
-import { useFlash } from '@/composables/useFlash'
+import { useStorage } from '@/composables/useStorage'
 
-let { flash } = useFlash()
+// going to use storage for food
+let food = useStorage('food', 'tacos')
+let age = useStorage('age', '21')
 </script>
 
 <template>
@@ -17,8 +19,8 @@ let { flash } = useFlash()
     <!-- if we have component only being used once then 'The' is ideal -->
     <!-- <TheWelcome /> -->
 
-    <p>
-      <button @click="flash('Test', 'It Works!')">Click Me</button>
-    </p>
+    <p>what is your favourite food? <input type="text" v-model="food" /></p>
+
+    <p>How old are you? <input type="text" v-model="age" /></p>
   </main>
 </template>
