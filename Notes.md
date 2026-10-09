@@ -5,8 +5,10 @@
 - Using a plain <header> tag with text inside will be useless as view won’t acknowledge it if it is outside of the ‘app’ id
 
   '''
+
     <div id=“app”></div>
-    '''
+
+'''
 
 - We use {{ greeting }} (as an example) to echo out data associated with the greeting property.
 - We set objects inside methods inside a script tag to associate the data to the property being echoed out.
