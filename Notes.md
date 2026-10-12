@@ -146,3 +146,17 @@ const user2 = new UserCard("Bob"); // Uses default age of 18
 ### defineEmits
 
 - allows child components to announce the status of events (e.g. button click/ form submission) that the user has initiated for the parent component to listen for (e.g. user has clicked delete-button, triggering a delete item from shopping cart action)
+
+## Dependency Injection With Provide and Inject
+
+- Dependency injection means that data can be accessed in specific components instead of having to be passed down multiple layers for one component to require that data and no other component require interaction with it (prop drilling).
+- Dependency injection support cleaner codebase, mitigating unnecessary code.
+- The parent component calls:
+  `provide('key', value) `
+  which makes the value available to all descendants.
+
+- any nested component can call:
+  ` inject('key')`
+  to grab it directly.
+
+- Analogy for memorability: props are like handing info to your immediate child, DI is like leaving info in a shared cupboard for any descendant to access without anyone in between having to carry or remember that info.
