@@ -160,3 +160,17 @@ const user2 = new UserCard("Bob"); // Uses default age of 18
   to grab it directly.
 
 - Analogy for memorability: props are like handing info to your immediate child, DI is like leaving info in a shared cupboard for any descendant to access without anyone in between having to carry or remember that info.
+
+## Store State in an External File
+
+- not limited to number of stores, can create any amount
+- allows us to access info across widespread of components (this is why a store is used)
+- Store files are used to manage centralised app data, components can access and update data easily whilst avoiding messy code.
+- Using Store files prevent prop drilling (props passed in at every level)
+
+### examples
+
+- Current user
+- shopping cart (need to access cart state across entire page/ widespread of components)
+- nav bar that shows label of number of items in cart
+- current shopping cart total
