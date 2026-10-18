@@ -151,6 +151,7 @@ const user2 = new UserCard("Bob"); // Uses default age of 18
 
 - Dependency injection means that data can be accessed in specific components instead of having to be passed down multiple layers for one component to require that data and no other component require interaction with it (prop drilling).
 - Dependency injection support cleaner codebase, mitigating unnecessary code.
+- Provide and Inject are more ideal for small systems due to the debugging abilities getting more difficult the greater the size of the system.
 - The parent component calls:
   `provide('key', value) `
   which makes the value available to all descendants.
@@ -174,3 +175,25 @@ const user2 = new UserCard("Bob"); // Uses default age of 18
 - shopping cart (need to access cart state across entire page/ widespread of components)
 - nav bar that shows label of number of items in cart
 - current shopping cart total
+
+## Pinia (VueX is old version)
+
+Pinia is literally a state management tool that
+
+- Acts as a central data store in a vue system.
+- It offers benefits such as debug tool chrome extension that tells user precisely when, where and why something has caused errors. This tool is accessible through inspect element > Vue.
+- It is ideal for wide scaled systems as it is much faster than alternative methods to find issues.
+- It utilises multiple files as stores for storing data for specific components.
+
+run in terminal ```
+npm install pinia
+
+## Code Organisation
+
+run in terminal ```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+### Transitions
+
+- can use transitions for modal cards and just use the <Transition> tag

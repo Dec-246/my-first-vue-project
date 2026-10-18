@@ -47,12 +47,26 @@ let comment = ref('initial textarea value')
 <!-- ------------------- EP: 22 - Store State in an External File
  ------------------- -->
 <!-- ---------------------------------------------------------------------------------------- -->
-<script setup>
+<!-- <script setup>
 import Quiz from '@/components/Quiz/Quiz.vue'
 </script>
 
 <template>
   <main>
     <Quiz />
+  </main>
+</template> -->
+
+<!-- ---------------------------------------------------------------------------------------- -->
+<!-- ------------------- EP: 27 - Code Organisation
+ ------------------- -->
+<!-- ---------------------------------------------------------------------------------------- -->
+<script setup>
+import TheWelcome from '../Components/TheWelcome.vue'
+</script>
+
+<template>
+  <main>
+    <!--<TheWelcome />-->
   </main>
 </template>
