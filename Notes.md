@@ -194,6 +194,13 @@ run in terminal ```
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
+## Transitions, Teleports, Tips
+
 ### Transitions
 
 - can use transitions for modal cards and just use the <Transition> tag
+
+### Teleports
+
+- Teleport is used to push content to specific parts of the DOM layout on a webpage
+- Teleport uses IDs (or other CSS selectors (IDs/ tag names e.g. 'body'/ class names e.g. '.services')) as references to target a specific HTML element in the browser's DOM structure

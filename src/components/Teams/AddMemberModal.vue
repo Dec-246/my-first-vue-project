@@ -1,12 +1,17 @@
 <script setup>
 import Modal from '@/Components/Modal.vue'
+
+// importing useTeamStore file
 import { useTeamStore } from '@/stores/TeamStore'
 import { ref } from 'vue'
 let showModal = ref(false)
 let team = useTeamStore()
 </script>
 
+<!-- button becomes separate from HTML being teleported to bottom of document.
+ get benefit of keeping code together -->
 <template>
+  <!-- when button clicked, show modal -->
   <button
     class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
     :disabled="!team.spotsRemaining"
@@ -15,6 +20,7 @@ let team = useTeamStore()
     Add Member ({{ team.spotsRemaining }} Spots Left)
   </button>
 
+  <!-- the to="" needs to be something that exists in the DOM  -->
   <Teleport to="body">
     <Modal :show="showModal" @close="showModal = false">
       <template #default>
