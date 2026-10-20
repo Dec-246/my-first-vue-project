@@ -80,6 +80,8 @@
 
 - Vue components follow a lifecycle from creation to removal. It maps out the different stages for a component.
 - https://vuejs.org/guide/essentials/lifecycle
+<img width="519" height="814" alt="image" src="https://github.com/user-attachments/assets/cabc74f6-a95f-4486-a190-3ad2f792f86b" />
+
 
 * Renderer encounters component: Vue finds a component to build
 * setup (Composition API) / beforeCreate: earliest hooks, runs before much exists yet
