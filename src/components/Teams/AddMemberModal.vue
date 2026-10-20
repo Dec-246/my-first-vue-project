@@ -19,6 +19,7 @@ let team = useTeamStore()
     <Modal :show="showModal" @close="showModal = false">
       <template #default>
         <p>Need to add a new member to your team?</p>
+        <br />
 
         <form class="mt-6">
           <div class="flex gap-2">

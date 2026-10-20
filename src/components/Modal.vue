@@ -13,6 +13,7 @@ defineProps({
     leave-from-class="opacity-100 scale-100"
     leave-to-class="opacity-0 scale-125"
   >
+    <!-- only show div if 'show' is true -->
     <div v-if="show" class="modal-mask">
       <div class="modal-container">
         <div>
@@ -29,6 +30,8 @@ defineProps({
   </Transition>
 </template>
 
+<!-- applying styling in same file -->
+<!-- these styles are only for this file therefore no requirement for global styles file. -->
 <style>
 .modal-mask {
   position: fixed;

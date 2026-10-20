@@ -16,6 +16,7 @@ let showModal = ref(false)
 </script>
 
 <template>
+  <!-- listen for add event and set showmodal to true -->
   <TeamHeader @add="showModal = true" />
 
   <div class="place-self-center flex flex-col gap-y-3" style="width: 725px">
