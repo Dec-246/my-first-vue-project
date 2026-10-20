@@ -77,3 +77,8 @@ import Swal from 'sweetalert2'
 <img width="1057" height="486" alt="image" src="https://github.com/user-attachments/assets/cfdfed6e-785b-4aa3-9431-d0b531a4d1cb" />
 
 <img width="1057" height="486" alt="image" src="https://github.com/user-attachments/assets/72289128-3073-43bb-b874-03caeb73d612" />
+
+
+**Team Dashboard View**
+
+<img width="1349" height="688" alt="image" src="https://github.com/user-attachments/assets/32f14402-ffb6-4888-a22a-46117f3b788b" />
