@@ -6,7 +6,9 @@ defineProps({
 
 <template>
   <!-- creating transition styling for cleaner code/ less duplicated code.
-   using Modal as a name to reference the styles from below -->
+   using Modal as a name to reference the styles from below.
+
+   Can optionally put style code inside transition tags but would lead to duplicated code. -->
   <Transition name="modal">
     <!-- only show div if 'show' is true -->
     <div v-if="show" class="modal-mask">
@@ -35,6 +37,7 @@ defineProps({
   display: grid;
   place-items: center;
 }
+/* vw means viewPort Width */
 .modal-container {
   background: white;
   padding: 1rem;
