@@ -14,7 +14,7 @@
 - Vue code involves using JavaScript such as ({{ greeting.length }}) to print length of the data property
 - In Vue, we can use v-model=“” that creates two-way link between form input element and reactive data property
   - In real world, can be used for live search filter for user names based on instant user input. V-model binds search input directly to app state.
-  - V-model commonly used on reactive string variables (these variables are often set using ‘’’ const -variable name here- = ref('') ‘’’. ref is used especially for string values that need to be reactive and change in the UI
+  - V-model commonly used on reactive string variables (these variables are often set using ``` const -variable name here- = ref('') ```. ref is used especially for string values that need to be reactive and change in the UI
 - setTimeout(() => {}, ); can be used to update the message after a given time1
 
 ## Vue Components
@@ -45,9 +45,9 @@
 
 - Can echo out length of array lists in a span tag to display dynamic view of number of items in that array.
 
-  '''
+  ```
      <h2><span>({{ assignments.length }})</span></h2> 
-    '''
+    ```
 
 - Set is used to create a set of items where each item must be unique. This helps us in this tutorial to create a unique set of tags for categories of assignments.
 - Must use the Computed property whenever displaying value that depends on other reactive data
@@ -65,7 +65,7 @@
   - Using ‘…’ with the Set class ‘...new Set(array)’ spreads the Set values as individual comma-separated values.
   - Using ‘[...new Set(array)]’ | ‘…’ spreads the values out, ‘Set’ dedupes data and ‘[ array brackets ]’ keeps it within array (collection of values)
 
-## using V-model=“”
+## Using ``` V-model=“” ```
 
 - allows input to be changed via UI as well as inspect element
 - Binds the value and listens for when the value changes.
@@ -102,9 +102,9 @@
 - Using created() { fetch() }, returns a promise which is an object that represents a value that may not be available yet.
 - Can use:
 
-‘’’
+```
 npx json-server db.json -p 3001
-‘’’
+```
 
 to create a fake API server to connect to a file with an array to fetch data from.
 
@@ -132,19 +132,21 @@ to create a fake API server to connect to a file with an array to fetch data fro
 #### Example of child component creating prop in style of class declaration
 
 // Think of the Child Component like a Class definition
+```
 class UserCard {
 constructor(name, age = 18) { // Default value set here
 this.name = name; // Type: String expected
 this.age = age; // Type: Number expected
 }
 }
-
+```
 #### Example of parent component instantiating the prop in style of a 'class'
 
 // Think of the Parent Component like instantiating the class
+```
 const user1 = new UserCard("Alice", 25);
 const user2 = new UserCard("Bob"); // Uses default age of 18
-
+```
 ### defineEmits
 
 - allows child components to announce the status of events (e.g. button click/ form submission) that the user has initiated for the parent component to listen for (e.g. user has clicked delete-button, triggering a delete item from shopping cart action)
@@ -155,11 +157,11 @@ const user2 = new UserCard("Bob"); // Uses default age of 18
 - Dependency injection support cleaner codebase, mitigating unnecessary code.
 - Provide and Inject are more ideal for small systems due to the debugging abilities getting more difficult the greater the size of the system.
 - The parent component calls:
-  `provide('key', value) `
+  ``` provide('key', value) ```
   which makes the value available to all descendants.
 
 - any nested component can call:
-  ` inject('key')`
+  ``` inject('key')```
   to grab it directly.
 
 - Analogy for memorability: props are like handing info to your immediate child, DI is like leaving info in a shared cupboard for any descendant to access without anyone in between having to carry or remember that info.
@@ -171,7 +173,7 @@ const user2 = new UserCard("Bob"); // Uses default age of 18
 - Store files are used to manage centralised app data, components can access and update data easily whilst avoiding messy code.
 - Using Store files prevent prop drilling (props passed in at every level)
 
-### examples
+### Examples
 
 - Current user
 - shopping cart (need to access cart state across entire page/ widespread of components)
@@ -187,14 +189,18 @@ Pinia is literally a state management tool that
 - It is ideal for wide scaled systems as it is much faster than alternative methods to find issues.
 - It utilises multiple files as stores for storing data for specific components.
 
-run in terminal ```
+run in terminal 
+```
 npm install pinia
+```
 
 ## Code Organisation
 
-run in terminal ```
+run in terminal 
+```
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+```
 
 ## Transitions, Teleports, Tips
 
